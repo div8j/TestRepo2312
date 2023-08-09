@@ -12,6 +12,8 @@ persist_with: divakar_ecommerce_default_datagroup
 
 explore: account {}
 
+explore: sql_runner_query {}
+
 explore: billion_orders {
   join: orders {
     type: left_outer
