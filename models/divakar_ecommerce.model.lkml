@@ -2,6 +2,8 @@ connection: "thelook"
 
 # include all the views
 include: "/views/**/*.view.lkml"
+include: "/lookml_dashboard_test.dashboard.lookml"
+include: "/test2.dashboard.lookml"
 
 datagroup: divakar_ecommerce_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;

@@ -9,12 +9,19 @@ view: employees {
     type: number
     sql: ${TABLE}.Manager ;;
   }
-  dimension: name {
-    type: string
-    sql: ${TABLE}.Name ;;
-  }
+  # dimension: name {
+  #   type: string
+  #   sql: ${TABLE}.Name ;;
+  # }
+
   measure: count {
     type: count
-    drill_fields: [name]
+    #drill_fields: [name]
+  }
+
+  dimension: employee_name {
+    type: string
+    alias: [name]
+    sql: ${TABLE}.Name ;;
   }
 }
