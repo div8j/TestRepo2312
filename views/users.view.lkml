@@ -20,6 +20,15 @@ view: users {
     map_layer_name: countries
     sql: ${TABLE}.country ;;
   }
+
+  dimension: user_id {
+    label: "myuser"
+    type: string
+    sql: ${id} ;;
+    suggest_dimension: orders.user_id
+    suggest_explore: orders
+  }
+
   dimension_group: created {
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]

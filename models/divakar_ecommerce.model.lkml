@@ -13,6 +13,9 @@ datagroup: divakar_ecommerce_default_datagroup {
 persist_with: divakar_ecommerce_default_datagroup
 
 explore: account {}
+explore: derivied_test {}
+
+explore: sql_runner_query {}
 
 explore: billion_orders {
   join: orders {
