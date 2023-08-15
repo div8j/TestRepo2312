@@ -61,6 +61,7 @@ view: users {
   measure: count {
     type: count
     drill_fields: [detail*]
+    html: <p style="color: #0059b2"><u>{{linked_value}}</u></p>;;
   }
 
   # ----- Sets of fields for drilling ------
