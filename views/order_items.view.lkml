@@ -34,6 +34,15 @@ view: order_items {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
+  measure: avg_sales_price {
+    type: average
+    sql: ${sale_price}/500 ;;
+  }
+  measure: Percentile_80th {
+    type: percentile
+    percentile: 80
+    sql: ${sale_price}/500 ;;
+  }
   measure: count {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
